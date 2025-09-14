@@ -1,17 +1,18 @@
 {
   "name": "svelte5-crud-form-generator",
-  "displayName": "Svelte5 CRUD Form Generator",
   "description": "VS Code extension to scaffold a Svelte 5 CRUD form component and server actions from the Command Palette",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "engines": {
     "vscode": "^1.80.0"
   },
+  "main": "./out/extension.js",
+  "displayName": "Svelte5 CRUD Form Generator",
   "repository": {
     "type": "git",
     "url": "https://github.com/mbanem/svelte5-crud-form-generator.git"
   },
   "license": "MIT",
-  "main": "./out/extension.js",
+  "publisher": "mbanem",
   "contributes": {
     "commands": [
       {
@@ -25,7 +26,8 @@
     "vscode:prepublish": "npm run build",
     "build": "clear; tsc -p .",
     "watch": "tsc -watch -p .",
-    "package": "vsce package"
+    "package": "vsce package",
+    "pak": "code --uninstall-extension mbanem.svelte5-crud-form-generator; rm svelte5-crud-form-generator-0.0.1.vsix;vsce package"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
